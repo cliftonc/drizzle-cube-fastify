@@ -2,7 +2,7 @@
 
 A minimal Fastify application demonstrating drizzle-cube integration with a simple analytics dashboard.
 
-[Github Repository](https://github.com/drizzle-cube-fastify)
+[Github Repository](https://github.com/cliftonc/drizzle-cube-fastify)
 
 ## Features
 
