@@ -2,6 +2,8 @@
 
 A minimal Fastify application demonstrating drizzle-cube integration with a simple analytics dashboard.
 
+[Github Repository](https://github.com/drizzle-cube-fastify)
+
 ## Features
 
 - **Fastify Backend**: Simple server using drizzle-cube Fastify adapter
