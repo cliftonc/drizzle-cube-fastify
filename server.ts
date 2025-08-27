@@ -35,7 +35,7 @@ function createDatabase(databaseUrl: string) {
 const db = createDatabase(connectionString)
 
 // Simple security context (demo user)
-const extractSecurityContext = async (request: any) => {
+const extractSecurityContext = async (_request: any) => {
   return {
     organisationId: 1,
     userId: 1
@@ -65,14 +65,14 @@ const start = async () => {
     // Register cube plugin
     await app.register(cubePlugin, {
       cubes: allCubes,
-      drizzle: db,
+      drizzle: db as any,
       schema,
       extractSecurityContext,
       engineType: 'postgres'
     })
 
     // Info endpoint
-    app.get('/api/info', async (request, reply) => {
+    app.get('/api/info', async (_request, _reply) => {
       return {
         name: 'Drizzle Cube Fastify Example',
         version: '1.0.0',
@@ -86,7 +86,7 @@ const start = async () => {
     })
 
     // Health check
-    app.get('/health', async (request, reply) => {
+    app.get('/health', async (_request, _reply) => {
       return { status: 'ok' }
     })
 
