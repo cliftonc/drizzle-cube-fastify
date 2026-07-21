@@ -17,10 +17,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    
-    /* Module Resolution */
-    "baseUrl": "."
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "scripts/**/*.ts",
